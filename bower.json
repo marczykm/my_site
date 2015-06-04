@@ -1,0 +1,25 @@
+{
+  "name": "my_site",
+  "version": "0.0.0",
+  "authors": [
+    "Marcin Marczyk (m.l.marczyk@gmail.com)"
+  ],
+  "license": "MIT",
+  "homepage": "marczyk.ovh",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angularjs": "~1.4.0",
+    "angular-messages": "~1.4.0",
+    "angular-animate": "~1.4.0",
+    "angular-aria": "~1.4.0",
+    "angular-material": "~0.9.7",
+    "roboto-fontface": "~0.4.2"
+  }
+}
