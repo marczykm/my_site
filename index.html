@@ -1,0 +1,43 @@
+<html ng-app="app">
+    <head>
+        <title>Strona testowa</title>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css">
+    </head>
+    <body ng-cloak>
+        <div ng-controller="SimpleCtrl">
+
+
+            <form name="form" class="form" ng-submit="submitForm()">
+                <md-content md-theme="docs-dark" layout-padding>
+                    <p>Witaj, {{message.sentence}}</p>
+                    <md-input-container>
+                        <label>Title</label>
+                        <input name="input" type="text" ng-model="message.sentence" required md-maxlength="30"/>
+                        <div ng-messages="form.input.$error">
+                            <div ng-message="required">This is required.</div>
+                            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                        </div>
+                    </md-input-container>
+                    <br/>
+                    <md-button class="md-raised md-primary">Wyslij</md-button>
+                    <md-button class="md-raised md-warn" ng-click="deleteElement()">Usun element</a>
+                </md-content>
+
+
+            </form>
+
+        </div>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-aria.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+        <script src="controller.js"></script>
+    </body>
+</html>
