@@ -1,7 +1,8 @@
 sudo apt-get update
-sudo apt-get install node npm
+sudo apt-get install nodejs npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 cd ~/websites/my_site
-npm install -g bower
-bower install
+sudo npm install -g bower
+bower install --allow-root
 (crontab -l ; echo "@reboot sh ~/websites/my_site/runServer.sh") | sort | uniq | crontab -
 echo "You should now reboot the system"
