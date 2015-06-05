@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install nodejs npm
+sudo apt-get install nodejs npm -y
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 cd ~/websites/my_site
 sudo npm install -g bower
