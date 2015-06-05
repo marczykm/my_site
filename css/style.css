@@ -2,7 +2,14 @@ body {
     background: #F1F8E9;
 }
 
+md-backdrop {
+  height: 500% !important;
+}
 
+md-grid-tile img {
+  height: 100%;
+  width: 100%;
+}
 
 #content>md-toolbar {
     background: #558B2F;
@@ -19,9 +26,14 @@ body {
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.bottomSheet {
+  position: fixed;
+  bottom: 0;
 }
 
 .bottomSheet .md-grid-item-content {

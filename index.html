@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="bower_components\roboto-fontface\css\roboto-fontface.css">
     </head>
     <body ng-cloak md-theme=''>
-        <div ng-controller="MainCtrl" layout="column" style="min-height: 500px">
-            <section layout="row" flex style="position: relative">
+        <div ng-controller="MainCtrl" layout="column">
+            <section layout="row" flex>
 
                 <!-- MENU -->
                 <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z2" 
@@ -59,6 +59,8 @@
                 </md-content>
 
 
+            </section>
+        </div>
                 <!-- FOOTER -->
                 <div id="footer" ng-controller="FooterCtrl" layout="row">
                     <md-button ng-click="showGridBottomSheet($event)" class="md-fab"
@@ -66,8 +68,6 @@
                         more
                     </md-button>
                 </div>
-            </section>
-        </div>
         
         <script src="bower_components\jquery\dist\jquery.min.js"></script>
         <script src="bower_components\angular\angular.js"></script>
