@@ -29,6 +29,9 @@ app.config( function($mdThemingProvider){
         'indigo', 
         $mdThemingProvider.extendPalette('indigo')
     );
+    $mdThemingProvider.theme('lightIndigo','default')
+        .primaryPalette('indigo')
+        .accentPalette('orange');
     $mdThemingProvider.theme('darkIndigo','default')
         .primaryPalette('indigo')
         .accentPalette('orange')

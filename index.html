@@ -17,15 +17,15 @@
         lightYellow,
         darkYellow 
     -->
-    <body ng-cloak md-theme='lightGreen'> 
-        <div ng-controller="MainCtrl" layout="column" id="container">
+    <body ng-cloak > 
+        <div ng-controller="MainCtrl" md-theme="{{currentTheme}}" layout="column" id="container" >
             <section layout="row" flex>
 
                 <!-- MENU -->
                 <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z5" 
                     md-component-id="left"
                     md-is-locked-open="$mdMedia('gt-lg')">
-                    <md-toolbar class="md-whiteframe-z2">
+                    <md-toolbar class="md-whiteframe-z2" md-theme-watch="true">
                         <h1 class="md-toolbar-tools"></h1>
                     </md-toolbar>
                     <md-content layout-padding ng-controller="MenuCtrl">
@@ -39,7 +39,7 @@
                             <md-list>
                                 <md-list-item ng-repeat="item in menu">
                                     <md-button ng-href="{{item.url}}"
-                                        class="md-primary" ng-click="closeMenu()">
+                                        class="md-primary" ng-click="closeMenu()" md-theme-watch="true">
                                         {{item.label}}
                                     </md-button>
                                 </md-list-item>
@@ -51,7 +51,7 @@
 
                 <!-- MAIN CONTENT -->
                 <md-content flex >
-                    <md-toolbar class="md-whiteframe-z2">
+                    <md-toolbar class="md-whiteframe-z2" md-theme-watch="true">
                         <div class="md-toolbar-tools">
                             <md-button ng-click="toggleMenu()"
                                 style="min-width: 40px; width: 40px;"
@@ -64,7 +64,7 @@
                             <h2 class="md-flex">~{{$location.$$path}}</h2>
                         </div>
                     </md-toolbar>
-                    <md-content layout-padding class="gridList">
+                    <md-content layout-padding class="gridList" md-theme-watch="true">
                         <div ng-view></div>
                     </md-content>
                 </md-content>
