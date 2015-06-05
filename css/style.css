@@ -27,13 +27,17 @@ md-grid-tile img {
 
 #footer {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 30px;
+    right: 20px;
 }
 
 .bottomSheet {
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
+}
+
+.md-grid md-list-item {
+  margin-top: 20px !important;
 }
 
 .bottomSheet .md-grid-item-content {

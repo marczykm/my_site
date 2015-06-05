@@ -4,31 +4,36 @@ app.controller('FooterCtrl', function($scope, $timeout, $mdBottomSheet){
             icon: 'img/icon/linkedin.svg',
             label: 'LinkedIn',
             url: 'https://pl.linkedin.com/pub/marcin-marczyk/59/884/a64',
-            color: '#0097B9'
+            color: '#0097B9',
+            tooltip: 'check me on LinkedId'
         },
         {
             icon: 'img/icon/facebook.svg',
             label: 'Facebook',
             url: 'https://www.facebook.com/marczyk.marcin',
-            color: '#47639E'
+            color: '#47639E',
+            tooltip: 'check me on Facebook'
         },
         {
             icon: 'img/icon/google_plus.svg',
             label: 'Google+',
             url: 'https://plus.google.com/+MarcinMarczyk89',
-            color: '#D44132'
+            color: '#D44132',
+            tooltip: 'check me on Google+'
         },
         {
             icon: 'img/icon/github.svg',
             label: 'GitHub',
             url: 'https://github.com/marczykm?tab=repositories',
-            color: '#777777'
+            color: '#777777',
+            tooltip: 'check my projects on GitHub'
         },
         {
             icon: 'img/icon/mail.svg',
-            label: 'E-mail',
+            label: 'Email',
             url: 'mailto:m.l.marczyk@gmail.com',
-            color: '#4AB367'
+            color: '#4AB367',
+            tooltip: 'write to me an email'
         },
     ];
 

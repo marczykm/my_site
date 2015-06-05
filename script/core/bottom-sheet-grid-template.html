@@ -4,9 +4,12 @@
         <md-button ng-click="redirect(item.url)"
             style="background: {{item.color}}" 
             class="md-grid-item-content" aria-label="{{item.label}}">
+
             <md-icon md-svg-src="{{item.icon}}" style="color: white"></md-icon>
             <div class="md-grid-text">{{item.label}}</div>
+            
         </md-button>
+        <md-tooltip>{{item.tooltip}}</md-tooltip>
     </md-list-item>
 
   </md-list>

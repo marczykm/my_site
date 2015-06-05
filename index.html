@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="bower_components\roboto-fontface\css\roboto-fontface.css">
     </head>
     <body ng-cloak md-theme=''>
-        <div ng-controller="MainCtrl" layout="column">
+        <div ng-controller="MainCtrl" layout="column" id="container">
             <section layout="row" flex>
 
                 <!-- MENU -->
                 <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z2" 
-                    md-component-id="left" 
+                    md-component-id="left"
                     md-is-locked-open="$mdMedia('gt-lg')">
                     <md-toolbar>
                         <h1 class="md-toolbar-tools"></h1>
@@ -28,7 +28,7 @@
                             <md-list>
                                 <md-list-item ng-repeat="item in menu">
                                     <md-button ng-href="{{item.url}}"
-                                        class="md-primary">
+                                        class="md-primary" ng-click="closeMenu()">
                                         {{item.label}}
                                     </md-button>
                                 </md-list-item>
@@ -59,15 +59,19 @@
                 </md-content>
 
 
-            </section>
-        </div>
                 <!-- FOOTER -->
                 <div id="footer" ng-controller="FooterCtrl" layout="row">
                     <md-button ng-click="showGridBottomSheet($event)" class="md-fab"
                         aria-label="Bottom sheet">
+                        <md-tooltip>
+                          find more content
+                        </md-tooltip>
                         more
+                        
                     </md-button>
                 </div>
+            </section>
+        </div>
         
         <script src="bower_components\jquery\dist\jquery.min.js"></script>
         <script src="bower_components\angular\angular.js"></script>
