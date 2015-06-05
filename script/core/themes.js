@@ -8,6 +8,10 @@ app.config( function($mdThemingProvider){
         .accentPalette('orange')
         .dark();
 
+    $mdThemingProvider.theme('lightYellow','default')
+        .primaryPalette('yellow')
+        .accentPalette('orange');
+
     $mdThemingProvider.definePalette(
         'red', 
         $mdThemingProvider.extendPalette('red')
@@ -16,6 +20,10 @@ app.config( function($mdThemingProvider){
         .primaryPalette('red')
         .accentPalette('orange')
         .dark();
+
+    $mdThemingProvider.theme('lightRed','default')
+        .primaryPalette('red')
+        .accentPalette('orange');
 
     $mdThemingProvider.definePalette(
         'indigo', 
@@ -26,7 +34,20 @@ app.config( function($mdThemingProvider){
         .accentPalette('orange')
         .dark();
 
-    $mdThemingProvider.theme('lightIndigo','default')
+    $mdThemingProvider.theme('lightGreen','default')
         .primaryPalette('indigo')
         .accentPalette('pink');
+
+    $mdThemingProvider.definePalette(
+        'green', 
+        $mdThemingProvider.extendPalette('green')
+    );
+    $mdThemingProvider.theme('darkGreen','default')
+        .primaryPalette('green')
+        .accentPalette('orange')
+        .dark();
+
+    $mdThemingProvider.theme('lightGreen','default')
+        .primaryPalette('green')
+        .accentPalette('orange');
 });
