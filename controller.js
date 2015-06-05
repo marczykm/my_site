@@ -19,8 +19,11 @@ app.controller('MainCtrl',
 app.controller('MenuCtrl', 
     function($scope, $mdSidenav, $mdUtil, $log){
         $scope.menu = [
-            'Curriculum Vitae', 
-            "Projects' description"
+            'Education',
+            'Career', 
+            'Projects so far',
+            'Hobbys',
+            'Contact'
         ];
 
         $scope.closeMenu = function () {
@@ -32,39 +35,50 @@ app.controller('MenuCtrl',
     });
 
 app.controller('FooterCtrl', function($scope, $timeout, $mdBottomSheet){
+    $scope.bottomSheetItems = [
+        {
+            icon: 'img/icon/linkedin.svg',
+            label: 'LinkedIn',
+            url: 'https://pl.linkedin.com/pub/marcin-marczyk/59/884/a64',
+            color: '#0097B9'
+        },
+        {
+            icon: 'img/icon/facebook.svg',
+            label: 'Facebook',
+            url: 'https://www.facebook.com/marczyk.marcin',
+            color: '#47639E'
+        },
+        {
+            icon: 'img/icon/google_plus.svg',
+            label: 'Google+',
+            url: 'https://plus.google.com/+MarcinMarczyk89',
+            color: '#D44132'
+        },
+        {
+            icon: 'img/icon/github.svg',
+            label: 'GitHub',
+            url: 'https://github.com/marczykm?tab=repositories',
+            color: '#777777'
+        },
+        {
+            icon: 'img/icon/mail.svg',
+            label: 'E-mail',
+            url: 'mailto:m.l.marczyk@gmail.com',
+            color: '#4AB367'
+        },
+    ];
+
     $scope.showGridBottomSheet = function($event) {
-        $scope.alert = '';
         $mdBottomSheet.show({
             templateUrl: 'templates/bottom-sheet-grid-template.html',
             controller: 'FooterCtrl',
             targetEvent: $event
-        }).then(function(clickedItem) {
-            $scope.alert = clickedItem.name + ' clicked!';
         });
     };
 
-    $scope.redirectToFacebook = function(){
-        var win = window.open("https://www.facebook.com/marczyk.marcin", '_blank');
+    $scope.redirect = function(url){
+        var win = window.open(url, '_blank');
         win.focus();
-    }
-
-    $scope.redirectToLinkedId = function(){
-        var win = window.open("https://pl.linkedin.com/pub/marcin-marczyk/59/884/a64", '_blank');
-        win.focus();
-    }
-
-    $scope.redirectToGooglePlus = function(){
-        var win = window.open("https://plus.google.com/+MarcinMarczyk89", '_blank');
-        win.focus();
-    }
-
-    $scope.redirectToGitHub = function(){
-        var win = window.open("https://github.com/marczykm?tab=repositories", '_blank');
-        win.focus();
-    }
-
-    $scope.sendMail = function(){
-        var win = window.open("mailto:m.l.marczyk@gmail.com", '_blank');
     }
 });
 

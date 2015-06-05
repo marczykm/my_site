@@ -9,7 +9,7 @@
     </head>
     <body ng-cloak md-theme=''>
         <div ng-controller="MainCtrl" layout="column" >
-            <section layout="row" flex>
+            <section layout="row" flex style="position: relative">
 
                 <!-- MENU -->
                 <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z2" 
@@ -42,6 +42,7 @@
                         <div class="md-toolbar-tools">
                             <md-button ng-click="toggleMenu()"
                                 style="min-width: 40px; width: 40px;"
+                                aria-label="Toggle menu"
                                 hide-gt-lg>
                                 <md-icon md-svg-src="img/menu.svg"
                                          alt="Toggle menu">
@@ -49,11 +50,49 @@
                                 
                             </md-button>
                             
-                            <h2 class="md-flex">Tytuł</h2>
+                            <h2 class="md-flex">~/</h2>
                         </div>
                     </md-toolbar>
-                    <md-content layout-padding >
-                        <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.</p>
+                    <md-content layout-padding class="gridList">
+                        <md-grid-list
+                            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+                            md-row-height-gt-md="1:1" md-row-height="2:2"
+                            md-gutter="12px" md-gutter-gt-sm="8px" >
+                        <md-grid-tile class="gray"
+                            md-rowspan="3" md-colspan="2" md-colspan-sm="1">
+                          <md-grid-tile-footer>
+                            <h3>#1: (3r x 2c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="green">
+                          <md-grid-tile-footer>
+                            <h3>#2: (1r x 1c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="yellow">
+                          <md-grid-tile-footer>
+                            <h3>#3: (1r x 1c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="blue"
+                            md-rowspan="2">
+                          <md-grid-tile-footer>
+                            <h3>#4: (2r x 1c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="red"
+                            md-rowspan="2" md-colspan="2" md-colspan-sm="1">
+                          <md-grid-tile-footer>
+                            <h3>#5: (2r x 2c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="green"
+                            md-rowspan="2" >
+                          <md-grid-tile-footer>
+                            <h3>#6: (2r x 1c)</h3>
+                          </md-grid-tile-footer>
+                        </md-grid-tile>
+                      </md-grid-list>
                     </md-content>
                 </md-content>
 
@@ -69,9 +108,10 @@
                 </div>
             </section>
         </div>
-
+        
         <script src="bower_components\jquery\dist\jquery.min.js"></script>
         <script src="bower_components\angular\angular.js"></script>
+        <script src="bower_components\angular-route\angular-route.js"></script>
         <script src="bower_components\angular-messages\angular-messages.js"></script>
         <script src="bower_components\angular-animate\angular-animate.js"></script>
         <script src="bower_components\angular-aria\angular-aria.js"></script>
