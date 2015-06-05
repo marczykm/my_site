@@ -6,6 +6,10 @@ md-backdrop {
   height: 500% !important;
 }
 
+md-card.md-default-theme {
+  padding-top: 8px ;
+}
+
 md-grid-tile img {
   height: 100%;
   width: 100%;
@@ -47,6 +51,10 @@ md-grid-tile img {
   width: 48px; }
 .bottomSheet .md-grid-text {
   padding-bottom: 5px; }
+
+.gridList {
+    padding: 20px 30px !important;
+}
 
   .gridList md-grid-list {
   margin: 8px; }

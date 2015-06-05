@@ -1,1 +1,15 @@
-education
+<md-card>
+  <md-toolbar class="md-hue-1">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Education</h2>
+    </div>
+  </md-toolbar>
+  <md-card-content layout-padding style="padding: 24px;">
+    <md-content ng-repeat="item in schools">
+        <h2>{{item.name}}</h2>
+        <h3>{{item.degree}}, {{item.department}}</h3>
+        <p>{{item.years}}</p>
+        <md-divider ng-if="!$last"/>
+    </md-content>
+  </md-card-content>
+</md-card>

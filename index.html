@@ -7,15 +7,15 @@
         <link rel="stylesheet" href="bower_components\angular-material\angular-material.min.css">
         <link rel="stylesheet" href="bower_components\roboto-fontface\css\roboto-fontface.css">
     </head>
-    <body ng-cloak md-theme=''>
+    <body ng-cloak md-theme='lightIndigo'>
         <div ng-controller="MainCtrl" layout="column" id="container">
             <section layout="row" flex>
 
                 <!-- MENU -->
-                <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z2" 
+                <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z5" 
                     md-component-id="left"
                     md-is-locked-open="$mdMedia('gt-lg')">
-                    <md-toolbar>
+                    <md-toolbar class="md-whiteframe-z2">
                         <h1 class="md-toolbar-tools"></h1>
                     </md-toolbar>
                     <md-content layout-padding ng-controller="MenuCtrl">
@@ -23,7 +23,8 @@
                             <img class="face" width="220px" src="img/face.jpg" alt=""/>
                         </a>
                         <h2 class="md-flex">Marcin Marczyk</h2>
-                        
+                        <h5 class="md-flex">Java Software Engineer</h3>
+                        <md-divider />
                         <md-content>
                             <md-list>
                                 <md-list-item ng-repeat="item in menu">

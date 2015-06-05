@@ -1,8 +1,32 @@
 app.config( function($mdThemingProvider){
-    $mdThemingProvider.theme('custom','default')
+    $mdThemingProvider.definePalette(
+        'yellow', 
+        $mdThemingProvider.extendPalette('yellow')
+    );
+    $mdThemingProvider.theme('darkYellow','default')
         .primaryPalette('yellow')
         .accentPalette('orange')
-        .warnPalette('green')
-        .backgroundPalette('grey')
         .dark();
+
+    $mdThemingProvider.definePalette(
+        'red', 
+        $mdThemingProvider.extendPalette('red')
+    );
+    $mdThemingProvider.theme('darkRed','default')
+        .primaryPalette('red')
+        .accentPalette('orange')
+        .dark();
+
+    $mdThemingProvider.definePalette(
+        'indigo', 
+        $mdThemingProvider.extendPalette('indigo')
+    );
+    $mdThemingProvider.theme('darkIndigo','default')
+        .primaryPalette('indigo')
+        .accentPalette('orange')
+        .dark();
+
+    $mdThemingProvider.theme('lightIndigo','default')
+        .primaryPalette('indigo')
+        .accentPalette('pink');
 });

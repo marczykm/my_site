@@ -33,7 +33,7 @@ app.controller('FooterCtrl', function($scope, $timeout, $mdBottomSheet){
             label: 'Email',
             url: 'mailto:m.l.marczyk@gmail.com',
             color: '#4AB367',
-            tooltip: 'write to me an email'
+            tooltip: 'send me an email'
         },
     ];
 
