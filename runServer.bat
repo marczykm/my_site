@@ -1,1 +1,1 @@
-python runServer.py
+http-server -p 80
