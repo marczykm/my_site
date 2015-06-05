@@ -1,2 +1,2 @@
 cd ~/websites/my_site
-http-server -p 80
+node node_modules/http-server/bin/http-server -p 80
