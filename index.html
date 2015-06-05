@@ -1,4 +1,4 @@
-<html ng-app="app">
+﻿<html ng-app="app">
     <head>
         <title>Strona testowa</title>
 
@@ -7,32 +7,75 @@
         <link rel="stylesheet" href="bower_components\angular-material\angular-material.min.css">
         <link rel="stylesheet" href="bower_components\roboto-fontface\css\roboto-fontface.css">
     </head>
-    <body ng-cloak>
-        <div ng-controller="SimpleCtrl">
-            <form name="form" class="form" ng-submit="submitForm()">
-                <md-content md-theme="docs-dark" layout-padding>
-                    <p>Witaj, {{message.sentence}}</p>
-                    <md-input-container>
-                        <label>Title</label>
-                        <input name="input" type="text" ng-model="message.sentence" required md-maxlength="30"/>
-                        <div ng-messages="form.input.$error">
-                            <div ng-message="required">This is required.</div>
-                            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+    <body ng-cloak md-theme=''>
+        <div ng-controller="MainCtrl" layout="column" >
+            <section layout="row" flex>
+
+                <!-- MENU -->
+                <md-sidenav id="menu" class="md-sidenav-left md-whiteframe-z2" 
+                    md-component-id="left" 
+                    md-is-locked-open="$mdMedia('gt-lg')">
+                    <md-toolbar>
+                        <h1 class="md-toolbar-tools"></h1>
+                    </md-toolbar>
+                    <md-content layout-padding ng-controller="MenuCtrl">
+                        <img class="face" width="220px" src="img/face.jpg" alt=""/>
+                        <h2 class="md-flex">Marcin Marczyk</h2>
+                        <md-content>
+                            <md-list>
+                                <md-list-item ng-repeat="item in menu">
+                                    <md-button ng-href="" target="_blank"
+                                        class="md-primary">
+                                        {{item}}
+                                    </md-button>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </md-content>
+                </md-sidenav>
+
+
+
+                <!-- MAIN CONTENT -->
+                <md-content flex >
+                    <md-toolbar class="md-whiteframe-z2">
+                        <div class="md-toolbar-tools">
+                            <md-button ng-click="toggleMenu()"
+                                style="min-width: 40px; width: 40px;"
+                                hide-gt-lg>
+                                <md-icon md-svg-src="img/menu.svg"
+                                         alt="Toggle menu">
+                                </md-icon>
+                                
+                            </md-button>
+                            
+                            <h2 class="md-flex">Tytuł</h2>
                         </div>
-                    </md-input-container>
-                    <br/>
-                    <md-button class="md-raised md-primary">Wyslij</md-button>
-                    <md-button class="md-raised md-warn" ng-click="deleteElement()">Usun element</a>
+                    </md-toolbar>
+                    <md-content layout-padding >
+                        <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.</p>
+                    </md-content>
                 </md-content>
-            </form>
+
+
+
+                <!-- FOOTER -->
+                <div id="footer" ng-controller="FooterCtrl" layout="row">
+                    
+                    <md-button ng-click="showGridBottomSheet($event)" class="md-fab"
+                        aria-label="Bottom sheet">
+                        more
+                    </md-button>
+                </div>
+            </section>
         </div>
 
         <script src="bower_components\jquery\dist\jquery.min.js"></script>
-        <script src="bower_components\angular\angular.min.js"></script>
-        <script src="bower_components\angular-messages\angular-messages.min.js"></script>
-        <script src="bower_components\angular-animate\angular-animate.min.js"></script>
-        <script src="bower_components\angular-aria\angular-aria.min.js"></script>
-        <script src="bower_components\angular-material\angular-material.min.js"></script>
+        <script src="bower_components\angular\angular.js"></script>
+        <script src="bower_components\angular-messages\angular-messages.js"></script>
+        <script src="bower_components\angular-animate\angular-animate.js"></script>
+        <script src="bower_components\angular-aria\angular-aria.js"></script>
+        <script src="bower_components\angular-material\angular-material.js"></script>
 
         <script src="controller.js"></script>
     </body>

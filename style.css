@@ -1,6 +1,36 @@
-.form.ng-invalid {
-    background: red;
+body {
+    background: #F1F8E9;
 }
+
+
+
+#content>md-toolbar {
+    background: #558B2F;
+}
+#menu>md-content {
+    text-align: center;
+}
+#menu>md-content>div{
+    text-align: left;
+}
+
+.face {
+    border-radius: 500px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottomSheet .md-grid-item-content {
+  height: 96px; }
+.bottomSheet .md-grid-item-content md-icon {
+  height: 48px;
+  width: 48px; }
+.bottomSheet .md-grid-text {
+  padding-bottom: 5px; }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;
