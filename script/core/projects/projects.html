@@ -1,1 +1,29 @@
-projects
+<md-card>
+  <md-toolbar class="md-hue-1">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Projects so far</h2>
+    </div>
+  </md-toolbar>
+  <md-card-content layout-padding style="padding: 24px;">
+    <md-content ng-repeat="item in projects">
+        <h2>{{item.name}}</h2>
+        <h3>{{item.description}}</h3>
+        <h4>{{item.company}}</h4>
+        <p>{{item.hired.from}} - {{item.hired.to}}</p>
+        <md-content>
+            <md-grid-list
+                md-cols-sm="1" 
+                md-cols-md="3" 
+                md-cols-lg="5"
+                md-cols-gt-lg="6"
+                md-row-height-gt-md="1:1" md-row-height="1:1"
+                md-gutter="12px" md-gutter-gt-sm="8px">
+                <md-grid-tile class="gray" ng-repeat="tool in item.tools">
+                    {{tool}}
+                </md-grid-tile>
+            </md-grid-list>
+        </md-content>
+        <md-divider ng-if="!$last"/>
+    </md-content>
+  </md-card-content>
+</md-card>

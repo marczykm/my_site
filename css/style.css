@@ -3,16 +3,16 @@ body {
 }
 
 md-backdrop {
-  height: 500% !important;
+    height: 500% !important;
 }
 
 md-card.md-default-theme {
-  padding-top: 8px ;
+    padding-top: 8px ;
 }
 
 md-grid-tile img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 #content>md-toolbar {
@@ -36,42 +36,56 @@ md-grid-tile img {
 }
 
 .bottomSheet {
-  position: fixed;
-  bottom: 10px;
+    position: fixed;
+    bottom: 10px;
 }
 
 .md-grid md-list-item {
-  margin-top: 20px !important;
+    margin-top: 20px !important;
 }
 
 .bottomSheet .md-grid-item-content {
-  height: 96px; }
+    height: 96px;
+}
 .bottomSheet .md-grid-item-content md-icon {
-  height: 48px;
-  width: 48px; }
+    height: 48px;
+    width: 48px;
+}
 .bottomSheet .md-grid-text {
-  padding-bottom: 5px; }
+    padding-bottom: 5px;
+}
 
 .gridList {
     padding: 20px 30px !important;
 }
 
-  .gridList md-grid-list {
-  margin: 8px; }
+.gridList md-grid-list {
+    margin: 8px;
+}
 .gridList .gray {
-  background: #f5f5f5; }
-.gridList .green {
-  background: #b9f6ca; }
-.gridList .yellow {
-  background: #ffff8d; }
-.gridList .blue {
-  background: #84ffff; }
-.gridList .purple {
-  background: #b388ff; }
-.gridList .red {
-  background: #ff8a80; }
+    background: #f5f5f5; 
+}
 .gridList md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+    transition: all 400ms ease-out 50ms;
+}
+
+@keyframes example {
+    0%   {  transform:scale(1)}
+    50%  {  transform:scale(1.2)}
+    100% {  transform:scale(1)}
+}
+
+#footer button {
+    animation-timing-function: ease;
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-iteration-count: 5;
+}
+
+md-grid-tile {
+    border-radius: 5px;
+}
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;

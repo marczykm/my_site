@@ -19,14 +19,14 @@ app.controller('MenuCtrl',
                 label: 'Projects so far',
                 url: hash_slash+'projects'
             },
-            {
+            /*{
                 label: 'Hobby',
                 url: hash_slash+'hobby'
-            },
-            {
+            },*/
+            /*{
                 label: 'Contact',
                 url: hash_slash+'contact'
-            }
+            }*/
         ];
 
         $scope.closeMenu = function () {

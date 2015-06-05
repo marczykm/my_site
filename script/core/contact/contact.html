@@ -1,1 +1,14 @@
-contact
+<md-card>
+  <md-toolbar class="md-hue-1">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Contact</h2>
+    </div>
+  </md-toolbar>
+  <md-card-content layout-padding style="padding: 24px;">
+    <md-content>
+        <h2>{{item.firstname}} {{item.surname}}</h2>
+        <h3>{{item.home.city}}, {{item.home.province}}, {{item.home.country}}</h3>
+        <p>{{item.years}}</p>
+    </md-content>
+  </md-card-content>
+</md-card>
