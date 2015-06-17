@@ -35,13 +35,13 @@ app.controller('FooterCtrl', function($scope, $timeout, $mdBottomSheet){
             color: '#4AB367',
             tooltip: 'send me an email'
         },
-        {
-            icon: 'img/icon/cv.svg',
-            label: 'CV',
-            url: 'docs/cv_marczyk_en.pdf',
-            color: '#FFB404',
-            tooltip: 'get my CV'
-        },
+//        {
+//            icon: 'img/icon/cv.svg',
+//            label: 'CV',
+//            url: 'docs/cv_marczyk_en.pdf',
+//            color: '#FFB404',
+//            tooltip: 'get my CV'
+//        },
     ];
 
     $scope.showGridBottomSheet = function($event) {
